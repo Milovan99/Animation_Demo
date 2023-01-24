@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="192dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginBottom="92dp"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnZoomIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnFadeIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:text="Fade In"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus" />
+
+    <Button
+        android:id="@+id/btnZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="13dp"
+        android:text="Zoom In"
+        app:layout_constraintBottom_toTopOf="@+id/btnLeftRight"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFadeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="14dp"
+        android:text="Fade out"
+        app:layout_constraintStart_toStartOf="@+id/textStatus"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus" />
+
+    <Button
+        android:id="@+id/btnRightLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:text="Right left"
+        app:layout_constraintStart_toEndOf="@+id/btnLeftRight"
+        app:layout_constraintTop_toBottomOf="@+id/btnZoomOut" />
+
+    <Button
+        android:id="@+id/btnLeftRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Left right"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRightLeft"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Zoom out"
+        app:layout_constraintBottom_toTopOf="@+id/btnTopBottom"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnTopBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="Top bot"
+        app:layout_constraintBottom_toTopOf="@+id/btnFlash"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="154dp"
+        android:text="Flash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:text="Bounce"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLeftRight" />
+
+    <Button
+        android:id="@+id/btnRotateRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="14dp"
+        android:text="Rotate right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFlash" />
+
+    <Button
+        android:id="@+id/btnRotateLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:text="Rotate left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBounce" />
+
+    <SeekBar
+        android:id="@+id/seekBarSpeed"
+        android:layout_width="182dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="46dp"
+        android:max="5000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnRotateLeft" />
+
+    <TextView
+        android:id="@+id/textSeekerSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="22dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRotateRight" />
+
+    <Button
+        android:id="@+id/btnFadeInOut"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="87dp"
+        android:text="Fade in out"
+        app:layout_constraintBottom_toTopOf="@+id/btnTopBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFadeOut"
+        app:layout_constraintTop_toTopOf="@+id/textStatus" />
+</androidx.constraintlayout.widget.ConstraintLayout>
